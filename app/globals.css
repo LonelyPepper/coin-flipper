@@ -20,25 +20,53 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
-@keyframes coin-flip {
-  0% {
+@keyframes flip-heads {
+  from {
     transform: rotateY(0deg);
   }
-  25% {
-    transform: rotateY(180deg) scale(1.1);
-  }
-  50% {
-    transform: rotateY(360deg) scale(1);
-  }
-  75% {
-    transform: rotateY(540deg) scale(1.1);
-  }
-  100% {
+  to {
     transform: rotateY(720deg);
   }
 }
 
-.coin-flip {
-  animation: coin-flip 1s cubic-bezier(0.4, 0.2, 0.2, 1);
+@keyframes flip-tails {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(900deg);
+  }
+}
+
+@keyframes flip-heads-from-tails {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(720deg);
+  }
+}
+
+.coin {
   transform-style: preserve-3d;
+}
+
+.flip-heads {
+  animation: flip-heads 1s ease-in-out forwards;
+}
+.flip-tails {
+  animation: flip-tails 1s ease-in-out forwards;
+}
+.flip-heads-from-tails {
+  animation: flip-heads-from-tails 1s ease-in-out forwards;
+}
+
+.heads, .tails {
+  backface-visibility: hidden;
+}
+.heads {
+  z-index: 10;
+}
+.tails {
+  transform: rotateY(180deg);
 }
