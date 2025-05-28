@@ -47,6 +47,15 @@ body {
   }
 }
 
+@keyframes flip-tails-from-tails {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(900deg);
+  }
+}
+
 .coin {
   transform-style: preserve-3d;
 }
@@ -59,6 +68,9 @@ body {
 }
 .flip-heads-from-tails {
   animation: flip-heads-from-tails 1s ease-in-out forwards;
+}
+.flip-tails-from-tails {
+  animation: flip-tails-from-tails 1s ease-in-out forwards;
 }
 
 .heads, .tails {

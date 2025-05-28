@@ -1,5 +1,5 @@
-function base32Encode(reported, actual) {
-  const str = reported.toString() + " " + actual.toString();
+export default function base32Encode(honesty, reported, actual) {
+  const str = honesty + " " + reported.toString() + " " + actual.toString();
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
   const bytes = new TextEncoder().encode(str);
 
@@ -22,4 +22,4 @@ function base32Encode(reported, actual) {
   return output;
 }
 
-console.log(base32Encode(15,16));
+console.log(base32Encode("h", 15,16));

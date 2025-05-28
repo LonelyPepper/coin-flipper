@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 export default function HonestyPledge() {
   const [name, setName] = useState("");
@@ -26,13 +27,17 @@ export default function HonestyPledge() {
           accordance with the principles of fair conduct.
         </p>
 
-        <button
+        <Link
           className="px-6 py-2 bg-white rounded shadow-md hover:bg-gray-200 text-black transition-colors duration-300"
-          onClick={() => window.location.href = '/flip'}
-          disabled={name.trim() === ""}
+          // onClick={() => window.location.href = '/flip'}
+          href={{
+            pathname: "/flip",
+            query: { honesty: "h" },
+          }}
+          style={{ pointerEvents: name.trim() === "" ? "none" : "auto" }}
         >
           I Pledge
-        </button>
+        </Link>
       </div>
     </main>
   );
