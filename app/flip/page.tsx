@@ -60,7 +60,6 @@ export default function Flip() {
     }
 
     const honesty = searchParams.get("honesty") || "nh";
-    console.log(honesty);
 
     setResult(base32encode(honesty, reported, actual));
   };
