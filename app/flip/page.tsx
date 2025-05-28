@@ -7,7 +7,6 @@ import Image from "next/image";
 import base32encode from "../helper/base_32.js";
 
 export default function Flip() {
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   const [animation, setAnimation] = useState("");
@@ -28,8 +27,7 @@ export default function Flip() {
     }
     setFlipping(true);
     setFlips(flips + 1);
-    let wasTails =
-      animation === "flip-tails" || animation === "flip-tails-from-tails";
+    let wasTails = animation === "flip-tails" || animation === "flip-tails-from-tails";
     setAnimation(wasTails ? "tails" : "");
     setTimeout(() => {
       let isHeads = Math.random() > 0.5;
