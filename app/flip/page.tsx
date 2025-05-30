@@ -65,7 +65,7 @@ export default function Flip() {
             <h1 className="mb-4 font-bold">coin flipper ({flips}/30)</h1>
 
             <h1 className="mb-4 w-96 text-center">
-                please count how many heads you flipped and enter that total here to
+                please keep track of how many heads you flipped and enter that total here to
                 submit
             </h1>
 
