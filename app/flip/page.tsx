@@ -134,7 +134,7 @@ export default function Flip() {
                         className="underline hover:pointer"
                         href={`mailto:joey5th@icloud.com,ignacy.nieweglowski@gmail.com?subject=CoinFlip&body=${result}`}
                     >
-                        email
+                        click here to email,
                     </a>{" "}
                     the following seed to enter and claim your reward: {result}
                 </span>
