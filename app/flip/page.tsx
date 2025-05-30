@@ -70,7 +70,7 @@ export default function Flip() {
             </h1>
 
             <h1 className="mb-8 w-96 text-center">
-                the person who flips the most number of heads will win a prize! ($50)
+                the person who flips the most number of heads will win a prize! ($100)
             </h1>
 
             <div className={`${animation} coin w-20 h-20 mb-4`}>
