@@ -22,4 +22,4 @@ export default function base32Encode(honesty, reported, actual) {
   return output;
 }
 
-console.log(base32Encode("h", 15,16));
+console.log(base32Encode("h", 15, 16));

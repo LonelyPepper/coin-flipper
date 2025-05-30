@@ -25,8 +25,8 @@ export default function Flip() {
         setFlips(flips + 1);
         let wasTails = animation === "flip-tails" || animation === "flip-tails-from-tails";
         setAnimation(wasTails ? "tails" : "");
+        let isHeads = Math.random() > 0.5;
         setTimeout(() => {
-            let isHeads = Math.random() > 0.5;
             setAnimation(
                 isHeads
                     ? wasTails
@@ -39,7 +39,7 @@ export default function Flip() {
         }, 100);
         setTimeout(() => {
             setFlipping(false);
-            if (actual) setActual(actual + 1);
+            if (isHeads) setActual(actual + 1);
         }, 2000);
     };
 
