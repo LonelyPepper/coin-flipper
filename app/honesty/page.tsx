@@ -31,7 +31,7 @@ export default function HonestyPledge() {
           className="px-6 py-2 bg-white rounded shadow-md hover:bg-gray-200 text-black transition-colors duration-300"
           // onClick={() => window.location.href = '/flip'}
           href={{
-            pathname: "/flip",
+            pathname: "/start",
             query: { honesty: "h" },
           }}
           style={{ pointerEvents: name.trim() === "" ? "none" : "auto" }}

@@ -12,7 +12,7 @@ export default function StartPage() {
 
             <button
                 className="mt-4 px-6 py-2 bg-white rounded hover:bg-gray-200 text-black transition-colors duration-300"
-                onClick={() => Math.random() > 0.5 ? router.push('flip') : router.push('honesty')}
+                onClick={() => Math.random() > 0.5 ? router.push('start') : router.push('honesty')}
             >
                 Start Flipping!
             </button>
